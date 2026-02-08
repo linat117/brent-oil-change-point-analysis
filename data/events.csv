@@ -1,0 +1,14 @@
+date,event_type,event,expected_impact
+1990-08-02,Geopolitical,Gulf War begins,Supply disruption and price spike
+1997-11-01,Economic,Asian Financial Crisis,Demand contraction
+2001-09-11,Geopolitical,9/11 attacks,Short-term volatility and demand shock
+2003-03-20,Geopolitical,Iraq War begins,Supply uncertainty
+2008-07-01,Economic,Global Financial Crisis oil peak,Sharp price collapse
+2010-04-20,Geopolitical,Deepwater Horizon oil spill,Regulatory and supply concerns
+2014-11-27,OPEC,OPEC maintains production despite surplus,Price collapse
+2016-01-16,OPEC,Iran sanctions lifted,Increased supply
+2018-11-05,Geopolitical,US reimposes Iran sanctions,Supply risk
+2020-03-11,Economic,COVID-19 declared pandemic,Demand collapse
+2020-04-12,OPEC,OPEC+ historic production cut,Market stabilization
+2022-02-24,Geopolitical,Russia invades Ukraine,Supply shock and volatility
+2023-10-07,Geopolitical,Middle East conflict escalation,Risk premium increase
