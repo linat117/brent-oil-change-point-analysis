@@ -1,16 +1,17 @@
 import pandas as pd
 
-
 def load_brent_data(filepath: str) -> pd.DataFrame:
-    """
-    Load and clean Brent oil price data.
-    """
-    df = pd.read_csv(filepath)
+    try:
+        df = pd.read_csv(filepath)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"File not found: {filepath}")
 
-    # Standardize column names
+    required_cols = {'date', 'price'}
+    if not required_cols.issubset(df.columns.str.lower()):
+        raise ValueError("CSV must contain 'date' and 'price' columns")
+
     df.columns = df.columns.str.lower()
+    df['date'] = pd.to_datetime(df['date'], errors='coerce')
+    df = df.dropna(subset=['date', 'price'])
 
-    df['date'] = pd.to_datetime(df['date'])
-    df = df.sort_values('date').reset_index(drop=True)
-
-    return df
+    return df.sort_values('date').reset_index(drop=True)
